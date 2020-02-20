@@ -63,7 +63,8 @@ class MailAccount
     {
         try {
 
-            $mailer->SMTPDebug = SMTP::DEBUG_SERVER;
+            $mailer->SMTPDebug = SMTP::DEBUG_OFF;
+            $mailer->Debugoutput = "error_log";
             $mailer->isSMTP();
             $mailer->Host = $this->host;
             $mailer->SMTPAuth = true;

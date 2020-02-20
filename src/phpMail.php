@@ -76,8 +76,6 @@ class phpMail
             $mailer->Body = $this->template->render_html();
             $mailer->AltBody = $this->template->render_text();
 
-            var_dump($mailer);
-            die();
             if(!$mailer->send()) {
                 throw new MailException("Error sending Mail");
             }
