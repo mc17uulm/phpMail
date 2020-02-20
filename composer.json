@@ -1,0 +1,26 @@
+{
+  "name": "mc17/phpmail",
+  "description": "Simple PHP library for easy email and email templating",
+  "authors": [
+    {
+      "name": "mc17",
+      "email": "marco.combosch@uni-ulm.de"
+    }
+  ],
+  "require": {
+    "php": "^7.4",
+    "phpmailer/phpmailer": "^6.1",
+    "myclabs/php-enum": "^1.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "phpMail\\": "./src/"
+    }
+  },
+  "require-dev": {
+    "phpstan/phpstan": "^0.12.11"
+  },
+  "scripts": {
+    "analyse": "./vendor/bin/phpstan analyse src --level 1"
+  }
+}
